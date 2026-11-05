@@ -58,7 +58,5 @@ def add_student():
         print(f"Added {name}.")
     except ValueError:
       print("Please enter valid numeric marks.")
-
-
 if __name__ == "__main__":
     main()
