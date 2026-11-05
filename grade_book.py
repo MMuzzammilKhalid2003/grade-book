@@ -23,8 +23,11 @@ def main():
 def add_student():
     name = input("Student name: ")
     marks = input("Marks separated by spaces: ")
-    students[name] = [int(m) for m in marks.split()]
-    print(f"Added {name}.")
+    try:
+        students[name] = [int(m) for m in marks.split()]
+        print(f"Added {name}.")
+    except ValueError:
+      print("Please enter valid numeric marks.")
 
 if __name__ == "__main__":
     main()
